@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import { Suspense } from "react";
 import { SkeletonLoading } from "../components/SkeletonLoading";
 import { SkeletonProps } from "react-loading-skeleton";
-import { LocationsPage } from "../pages/locations";
+import { LocationsPage } from "../pages/location";
 
 export default function LocationRoutes() {
     const skeletonProps: SkeletonProps = {
