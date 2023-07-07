@@ -27,7 +27,14 @@ export function CharacterByIdQuery() {
                     status
                     species
                     type
-                
+                    gender
+                    image
+                    location {
+                        id
+                        name
+                        dimension
+                        type
+                    }
                 }
             }
             image
