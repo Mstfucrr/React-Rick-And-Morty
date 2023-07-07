@@ -30,7 +30,7 @@ export const FilterByStatusItem = (
                         }`}
                 >
                     <BtnFilterIcon active={props.status.active}
-                        color={props.status.colorSet.color}
+                        status={props.status.name}
                     ></BtnFilterIcon>
                     {props.status.name}
                 </BtnFilterStye>

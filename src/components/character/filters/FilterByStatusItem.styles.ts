@@ -28,13 +28,13 @@ export const BtnFilterStye = styled.a<{ active: boolean , color : string , hover
 
 `;
 
-export const BtnFilterIcon = styled.div<{ active: boolean , color: string }>`
+export const BtnFilterIcon = styled.div<{ active: boolean , status: string }>`
     width: 12px;
     height: 12px;
     margin-right: 8px;
     border-radius: 50%;
     display: inline-block;
-    background-color: ${props => props.active ? props.color : 'white'};
+    background-color: ${props => props.status === 'Alive' ? 'rgba(152, 205, 77, 1)' : props.status === 'Dead' ? 'rgba(185, 0, 0, 1)' : 'rgba(184, 184, 184, 1)'};
+    
 `;
-
 
