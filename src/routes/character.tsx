@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import { Suspense } from "react";
 import { SkeletonLoading } from "../components/SkeletonLoading";
 import { SkeletonProps } from "react-loading-skeleton";
+import { CharactersPage } from "../pages/character";
 
 export default function CharacterRoutes() {
     const skeletonProps: SkeletonProps = {
@@ -18,7 +19,7 @@ export default function CharacterRoutes() {
             <Route path={PATH.CHARACTERS}
                 Component={() => (
                     <Suspense fallback={<SkeletonLoading {...skeletonProps} />}>
-                        <div>Characters</div>
+                        <CharactersPage />
                     </Suspense>
                 )} />
         </Routes>
