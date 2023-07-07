@@ -12,7 +12,13 @@ export function LocationByIdQuery() {
             residents {
                 id
                 name
+                status
+                species
+                type
+                gender
                 image
+                created
+
             }
         }
     }
