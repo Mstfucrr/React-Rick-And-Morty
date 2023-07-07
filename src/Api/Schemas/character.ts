@@ -1,4 +1,5 @@
 import { Episode } from "./episode";
+import { Location } from "./location";
 import { Info, main } from "./main";
 
 export interface Character extends main {
