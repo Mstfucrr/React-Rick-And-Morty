@@ -1,6 +1,7 @@
-import { Character } from "../../Api/Schemas/character"
+import { Character } from "../../../Api/Schemas/character"
 import { CharacterInfo } from "./CharacterInfo"
 import { OtherCharactersView } from "./OtherCharacters"
+
 
 
 export const CharacterDetailView = (

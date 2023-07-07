@@ -1,5 +1,5 @@
-import { Character } from "../../Api/Schemas/character"
-import { CharacterItemInfo, CharacterItemStatusIcon } from "./CharacterElement.styles"
+import { Character } from '../../../Api/Schemas/character';
+import { CharacterItemInfo, CharacterItemStatusIcon } from '../List/CharacterElement.styles';
 import { CharacterItemImg, CharacterName } from "./CharacterInfo.styles"
 
 export const CharacterInfo = (

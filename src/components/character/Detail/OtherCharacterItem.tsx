@@ -1,4 +1,4 @@
-import { Character } from "../../Api/Schemas/character"
+import { Character } from '../../../Api/Schemas/character';
 import { OtherCharacterItem, OtherCharacterItemImg, OtherCharacterItemLocationDimension, OtherCharacterItemName, OtherCharacterItemSpecies } from "./OtherCharacterItem.styles"
 
 

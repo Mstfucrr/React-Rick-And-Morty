@@ -25,7 +25,7 @@ export const FilterByStatusList = (
 
     return (
         <>
-            <div className="d-flex flex-column w-100 pl-5">
+            <div className="d-flex flex-column w-100 pl-5 pt-5 overflow-auto">
                 <CharacterListFilterTitle>
                     Filter by status:
                 </CharacterListFilterTitle>

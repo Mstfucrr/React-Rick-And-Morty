@@ -1,5 +1,5 @@
 
-import { Character } from '../../Api/Schemas/character';
+import { Character } from '../../../Api/Schemas/character';
 import { CharacterElement } from './CharacterElement';
 import { CharacterListStyle } from './CharacterList.styles';
 
@@ -7,7 +7,7 @@ export const CharacterList = (props: { characters: Character[] }) => {
     return (
         <CharacterListStyle>
 
-            <div className="d-flex flex-wrap justify-content-center">
+            <div className="d-flex flex-wrap justify-content-center container-fluid">
                 {props.characters.map((character) => {
                     return (
                         <CharacterElement character={character} key={character.id} />

@@ -7,6 +7,7 @@ export const NavbarContainer = styled.div`
     height: 100px;
     color: white;
     background-color: white;
+    border-bottom: 1px solid #E5E5E5;
 `;
 
 export const NavbarTitle = styled.img`
