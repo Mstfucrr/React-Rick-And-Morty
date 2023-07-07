@@ -16,7 +16,7 @@ export default function LocationRoutes() {
 
     return (
         <Routes>
-            <Route path={PATH.LOCATIONS}
+            <Route path={PATH.LOCATIONS || PATH.HOME}
                 Component={() => (
                     <Suspense fallback={<SkeletonLoading {...skeletonProps} />}>
                         <LocationsPage />
