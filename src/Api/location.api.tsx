@@ -6,7 +6,6 @@ import { LocationsData ,Location , FilterLocation } from "./Schemas/location";
 
 export const getLocation = async (id: string) => {
     var query = LocationByIdQuery();
-    const te = await request(API_ENDPOINT, query, { id });
     const { location }: { location: Location } = await request(API_ENDPOINT, query, { id });
     return location;
 }
