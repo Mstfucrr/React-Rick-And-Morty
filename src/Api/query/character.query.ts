@@ -2,7 +2,7 @@ import { gql } from "graphql-request";
 
 export function CharacterByIdQuery() {
     const query = gql`
-    query {
+    query($id: ID!)  {
         character(id: $id) {
             id
             name
