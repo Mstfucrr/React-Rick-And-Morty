@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getCharacter } from "../Api/character.api";
 import { Character } from "../Api/Schemas/character";
-import { CharacterDetailView } from "../components/character/CharacterDetail";
+import { CharacterDetailView } from "../components/character/Detail/CharacterDetail";
 
 
 export const CharacterDetailPage = () => {
