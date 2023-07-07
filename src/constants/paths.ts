@@ -2,5 +2,5 @@ export const PATH = {
     HOME: '/',
     LOCATIONS : '/locations',
     CHARACTERS : '/characters',
-    CHRACTER_DETAIL : '/characters/:id'
+    CHRACTER_DETAIL : '/character/:id'
 }
