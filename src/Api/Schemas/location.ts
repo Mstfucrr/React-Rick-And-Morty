@@ -14,9 +14,14 @@ export interface LocationData {
 }
 
 export interface LocationsData {
-    locations: {
-        info: Info;
-        results: Location[];
-    }
+    info: Info;
+    results: Location[];
 }
+
+export interface FilterLocation {
+    name?: string;
+    type?: string;
+    dimension?: string;
+}
+
 
