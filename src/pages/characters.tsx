@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import { Character, FilterCharacter } from "../Api/Schemas/character";
 import { Info } from "../Api/Schemas/main";
-import { getCharacters, getCharactersByLocation } from "../Api/character.api";
+import { getCharactersByLocation } from "../Api/character.api";
 import { CharacterList } from "../components/character/CharacterList";
-import { useParams } from "react-router-dom";
 import { FilterByStatusList } from "../components/character/filters/FilterByStatusList";
 import {colors} from "../assets/Colors/Colors";
 
