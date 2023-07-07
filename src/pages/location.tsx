@@ -1,15 +1,37 @@
-import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { getLocations } from "../Api/location.api";
+import { Location } from "../Api/Schemas/location";
+import { Info } from "../Api/Schemas/main";
+import { LocationList } from "../components/location/LocationList";
 
 
 
 export const LocationsPage = () => {
+
     const [page, setPage] = useState(1);
-    const { id } = useParams<{ id: string }>();
+    const [error, setError] = useState(false);
+    const [locations, setLocations] = useState<Location[]>([]);
+    const [info, setInfo] = useState<Info>(undefined!);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                await getLocations(page).then((data) => {
+                    setLocations(data.results);
+                    setInfo(data.info);
+                });
+            } catch (error) {
+                setError(true);
+            }
+
+        }
+        fetchData();
+    }, [page]);
+
 
     return (
-        <div>
-            Locations
-        </div>
+        <>
+            <LocationList locations={locations} />
+        </>
     )
 }
