@@ -16,12 +16,20 @@ export default function LocationRoutes() {
 
     return (
         <Routes>
-            <Route path={PATH.LOCATIONS || PATH.HOME}
+            <Route path={PATH.LOCATIONS}
                 Component={() => (
                     <Suspense fallback={<SkeletonLoading {...skeletonProps} />}>
                         <LocationsPage />
                     </Suspense>
                 )} />
+            <Route path={PATH.HOME}
+                Component={() => (
+                    <Suspense fallback={<SkeletonLoading {...skeletonProps} />}>
+                        <LocationsPage />
+                    </Suspense>
+                )} />
+
+
         </Routes>
     )
 }
