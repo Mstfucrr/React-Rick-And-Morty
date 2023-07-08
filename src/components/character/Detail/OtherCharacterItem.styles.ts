@@ -37,6 +37,15 @@ export const OtherCharacterItemName = styled.a`
         color: rgba(0, 0, 0, .5);
         text-decoration: none;
     }
+    
+    @media (max-width: 768px) {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+
+    }
 `;
 
 
