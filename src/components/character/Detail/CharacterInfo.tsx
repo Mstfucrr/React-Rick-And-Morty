@@ -28,7 +28,7 @@ export const CharacterInfo = (
             </div>
             <div className="row">
                 <div className="col-12">
-                    {props.character.location.dimension}
+                    {props.character.location.dimension} <br/> {props.character.origin.name}
                 </div>
             </div>
         </div>
