@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { getCharacter } from "../Api/character.api";
 import { Character } from "../Api/Schemas/character";
 import { CharacterDetailView } from "../components/character/Detail/CharacterDetail";
+import { SkeletonLoading } from "../components/SkeletonLoading";
 
 
 export const CharacterDetailPage = () => {
@@ -19,8 +20,7 @@ export const CharacterDetailPage = () => {
             try {
                 await getCharacter(id as string).then((data) => {
                     setCharacter(data);
-                    setOtherCharacters(data.location.residents);
-
+                    setOtherCharacters(data.location.residents.filter((item) => item.status === data.status));
                 });
                 setError(false);
             } catch (error) {
@@ -35,8 +35,20 @@ export const CharacterDetailPage = () => {
 
     return (
         <>
-            {loading && <div>Loading...</div>}
             {error && <div>Error</div>}
+            {loading &&
+                <div className="pl-5 pr-5 row justify-content-between">
+                    <div className="col-md-4">
+                        <SkeletonLoading width="100%" height={400} />
+                    </div>
+                    <div className="col-lg-8" style={{
+                        maxHeight: "70vh",
+                        overflowY: "auto"
+                    }}>
+                        <SkeletonLoading width="100%" height={600} />
+                    </div>
+                </div>
+            }
             {character && otherCharacters && character.location &&
                 <CharacterDetailView character={character} otherCharacters={otherCharacters} />
             }
