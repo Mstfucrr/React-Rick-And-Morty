@@ -12,7 +12,10 @@ export const CharacterDetailView = (
             <div className="col-md-4">
                 <CharacterInfo character={props.character} />
             </div>
-            <div className="col-lg-8">
+            <div className="col-lg-8" style={{
+                maxHeight: "70vh",
+                overflowY: "auto"
+            }}>
                 <OtherCharactersView otherCharacters={props.otherCharacters} />
             </div>
         </div>

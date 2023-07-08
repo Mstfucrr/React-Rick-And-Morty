@@ -6,7 +6,7 @@ export const CharacterInfo = (
     props: { character: Character }
 ) => {
     return (
-        <div className="d-flex flex-column">
+        <div className="d-flex flex-column pb-3">
             <div className="row">
                 <div className="col-12">
                     <CharacterItemImg src={props.character.image} alt={props.character.name} />
