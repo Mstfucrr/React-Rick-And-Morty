@@ -16,7 +16,7 @@ export const BtnFilterStye = styled.a<{ active: boolean , color : string , hover
     margin: 0 5px;
     cursor: pointer;
     background-color: ${props => props.active ? props.color : 'white'};
-    border: ${props => props.active ? props.border : '1px solid #000'};
+    border: ${props => props.active ? props.border : '1px solid '+props.activeColor};
     &:hover {
         background-color: ${props => props.hoverColor};
         text-decoration: none;
@@ -35,6 +35,6 @@ export const BtnFilterIcon = styled.div<{ active: boolean , status: string }>`
     border-radius: 50%;
     display: inline-block;
     background-color: ${props => props.status === 'Alive' ? 'rgba(152, 205, 77, 1)' : props.status === 'Dead' ? 'rgba(185, 0, 0, 1)' : 'rgba(184, 184, 184, 1)'};
-    
+}  
 `;
 

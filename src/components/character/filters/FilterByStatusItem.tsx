@@ -19,7 +19,7 @@ export const FilterByStatusItem = (
     return (
         <>
             <div className="filter_col">
-
+                
                 <BtnFilterStye
                     active={props.status.active}
                     color={props.status.colorSet.color}
@@ -31,6 +31,9 @@ export const FilterByStatusItem = (
                 >
                     <BtnFilterIcon active={props.status.active}
                         status={props.status.name}
+                        style={{
+                            backgroundColor: props.status.active ? undefined : props.status.colorSet.activeColor,
+                        }}
                     ></BtnFilterIcon>
                     {props.status.name}
                 </BtnFilterStye>
