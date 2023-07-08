@@ -3,8 +3,9 @@ import { Character, FilterCharacter } from "../Api/Schemas/character";
 import { Info } from "../Api/Schemas/main";
 import { getCharactersByLocation } from "../Api/character.api";
 import { FilterByStatusList } from "../components/character/filters/FilterByStatusList";
-import {colors} from "../assets/Colors/Colors";
+import { colors } from "../assets/Colors/Colors";
 import { CharacterList } from "../components/character/List/CharacterList";
+import { PageButtons } from "../components/PageNumbersBar";
 
 
 export const CharactersPage = () => {
@@ -33,7 +34,6 @@ export const CharactersPage = () => {
                 gender: gender ? gender : undefined
             } as FilterCharacter;
             setFilter(filter);
-            setPage(params.get('page') ? parseInt(params.get('page') as string) : 1);
             try {
                 await getCharactersByLocation(locationid as string, page, filter).then((data) => {
                     setCharacters(data.results);
@@ -53,22 +53,22 @@ export const CharactersPage = () => {
         {
             name: "Dead",
             active: true,
-            colorSet : colors.status.Dead
+            colorSet: colors.status.Dead
         },
         {
             name: "Alive",
             active: true,
-            colorSet : colors.status.Alive
+            colorSet: colors.status.Alive
         },
         {
             name: "unknown",
             active: true,
-            colorSet : colors.status.Unknown
+            colorSet: colors.status.Unknown
         },
         {
             name: "All",
             active: true,
-            colorSet : colors.status.All
+            colorSet: colors.status.All
         }
     ]
 
@@ -76,6 +76,7 @@ export const CharactersPage = () => {
         <>
             <FilterByStatusList status={statusList} location={locationid as string} />
             <CharacterList characters={characters} />
+            <PageButtons page={page} setPage={setPage} info={info} />
         </>
     )
 }

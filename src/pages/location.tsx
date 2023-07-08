@@ -3,6 +3,7 @@ import { getLocations } from "../Api/location.api";
 import { Location } from "../Api/Schemas/location";
 import { Info } from "../Api/Schemas/main";
 import { LocationList } from "../components/location/LocationList";
+import { PageButtons } from "../components/PageNumbersBar";
 
 
 
@@ -32,6 +33,7 @@ export const LocationsPage = () => {
     return (
         <>
             <LocationList locations={locations} />
+            <PageButtons page={page} setPage={setPage} info={info} />
         </>
     )
 }
