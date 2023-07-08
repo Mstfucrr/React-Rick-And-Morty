@@ -1,6 +1,9 @@
+import { useEffect, useState } from 'react';
 import { Character } from '../../../Api/Schemas/character';
+import { SkeletonLoading } from '../../SkeletonLoading';
 import { CharacterItemInfo, CharacterItemStatusIcon } from '../List/CharacterElement.styles';
 import { CharacterItemImg, CharacterName } from "./CharacterInfo.styles"
+import { OtherCharacterItemSpecies } from './OtherCharacterItem.styles';
 
 export const CharacterInfo = (
     props: { character: Character }
@@ -22,15 +25,20 @@ export const CharacterInfo = (
                     <CharacterItemStatusIcon status={props.character.status} />
                     {props.character.status}
                 </CharacterItemInfo>
-                <div className="col-6 text-right">
-                    {props.character.species} - {props.character.gender}
+                <div className="col-6">
+                    <OtherCharacterItemSpecies className='text-right'>
+                        {props.character.species} - {props.character.gender}
+                    </OtherCharacterItemSpecies>
                 </div>
             </div>
             <div className="row">
                 <div className="col-12">
-                    {props.character.location.dimension} <br/> {props.character.origin.name}
+                    {props.character.location.dimension === "unknown" ? "-" : props.character.location.dimension
+                    } <br />
+                    {props.character.origin.name === "unknown" ? "-" : props.character.origin.name}
                 </div>
             </div>
-        </div>
+        </div >
+
     )
 }
