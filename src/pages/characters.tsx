@@ -52,22 +52,22 @@ export const CharactersPage = () => {
     var statusList = [
         {
             name: "Dead",
-            active: true,
+            active: characters && characters.filter((character) => character.status === "Dead").length > 0 ? true : false,
             colorSet: colors.status.Dead
         },
         {
             name: "Alive",
-            active: true,
+            active: characters && characters.filter((character) => character.status === "Alive").length > 0 ? true : false,
             colorSet: colors.status.Alive
         },
         {
             name: "unknown",
-            active: true,
+            active: characters && characters.filter((character) => character.status === "unknown").length > 0 ? true : false,
             colorSet: colors.status.Unknown
         },
         {
             name: "All",
-            active: true,
+            active: characters && characters.filter((character) => character.status === "All").length > 0 ? true : false,
             colorSet: colors.status.All
         }
     ]
