@@ -1,5 +1,5 @@
 
-# REACT İle Rick-And-Morty 
+# REACT İLE RICK AND MORTY 
 
 ### Bu proje [Figma](https://www.figma.com/file/yG06KXDlMRs1dPMmuWG1e8/viravira.co---Frontend-Developer-Task-(Rick-and-Morty)?type=design&node-id=0-1&mode=design&t=JHMwFi0WJ8aQvBP4-0) tasarımını React kullanarak bir web uygulamasına dönüştürmek ve [GraphQL API](https://rickandmortyapi.com/graphql)'si üzerinden verileri çekerek bu verileri tasarımda göstermektir.
 
