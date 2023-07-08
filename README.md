@@ -130,3 +130,17 @@ Ve tarayıcıda görüntülemek için **http://localhost:3000** açın.
   <img src="https://github.com/Mstfucrr/React-Rick-And-Morty/assets/76887611/bfbc808e-3f88-4504-975c-35a91feb4b7a" width="33%" height="auto" />
 </div>
 
+
+## Ekler
+
+### CLS RAPORU
+
+```bash
+{
+    "name": "CLS",
+    "value": 0,
+    "delta": 0,
+    "entries": [],
+    "id": "v2-1688851918689-1630438185744"
+}
+```
