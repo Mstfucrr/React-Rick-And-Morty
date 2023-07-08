@@ -9,8 +9,8 @@ export const FilterByStatusList = (
             active: boolean,
             colorSet: {
                 color: string,
-                hoverColor: string,
-                activeColor: string,
+                hovercolor: string,
+                activecolor: string,
                 border: string,
             }
 
@@ -34,7 +34,7 @@ export const FilterByStatusList = (
 
                     {props.status.map((status) => {
                         return (
-                            <FilterByStatusItem status={status} location={props.location} />
+                            <FilterByStatusItem status={status} location={props.location} key={status.name} />
                         )
                     })}
 
