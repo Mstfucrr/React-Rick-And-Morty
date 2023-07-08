@@ -29,6 +29,7 @@ export const CharacterList = (props: { characters: Character[] }) => {
                                     borderRadius: '15px'
                                 }}
                                 className="p-4 m-2"
+                                key={index}
                             />
                         ))}
                     </>
