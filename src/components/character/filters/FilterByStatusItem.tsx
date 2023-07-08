@@ -7,8 +7,8 @@ export const FilterByStatusItem = (
             active: boolean,
             colorSet: {
                 color: string,
-                hoverColor: string,
-                activeColor: string,
+                hovercolor: string,
+                activecolor: string,
                 border: string,
             },
         },
@@ -21,18 +21,18 @@ export const FilterByStatusItem = (
             <div className="filter_col">
                 
                 <BtnFilterStye
-                    active={props.status.active}
+                    active={props.status.active ? 1 : 0}
                     color={props.status.colorSet.color}
-                    hoverColor={props.status.colorSet.hoverColor}
-                    activeColor={props.status.colorSet.activeColor}
+                    hovercolor={props.status.colorSet.hovercolor}
+                    activecolor={props.status.colorSet.activecolor}
                     border={props.status.colorSet.border}
                     href={`/characters?location=${props.location}${props.status.name.toLowerCase() === "all" ? "" : `&status=${props.status.name.toLowerCase()}`
                         }`}
                 >
-                    <BtnFilterIcon active={props.status.active}
+                    <BtnFilterIcon
                         status={props.status.name}
                         style={{
-                            backgroundColor: props.status.active ? undefined : props.status.colorSet.activeColor,
+                            backgroundColor: props.status.active ? undefined : props.status.colorSet.activecolor,
                         }}
                     ></BtnFilterIcon>
                     {props.status.name}

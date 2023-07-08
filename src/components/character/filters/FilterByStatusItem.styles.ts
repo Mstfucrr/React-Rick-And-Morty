@@ -1,7 +1,7 @@
 
 import styled from 'styled-components';
 
-export const BtnFilterStye = styled.a<{ active: boolean , color : string , hoverColor : string , activeColor : string, border: string }>`
+export const BtnFilterStye = styled.a<{ active: number , color : string , hovercolor : string , activecolor : string, border: string }>`
     width: 120px;
     height: 40px;
     text-decoration: none !important;
@@ -15,20 +15,20 @@ export const BtnFilterStye = styled.a<{ active: boolean , color : string , hover
     justify-content: flex-start;
     margin: 0 5px;
     cursor: pointer;
-    background-color: ${props => props.active ? props.color : 'white'};
-    border: ${props => props.active ? props.border : '1px solid '+props.activeColor};
+    background-color: ${props => props.active == 1 ? props.color : 'white'};
+    border: ${props => props.active == 1 ? props.border : '1px solid '+props.activecolor};
     &:hover {
-        background-color: ${props => props.hoverColor};
+        background-color: ${props => props.hovercolor};
         text-decoration: none;
     }
     &:active {
-         background-color: ${props => props.activeColor};
+         background-color: ${props => props.activecolor};
             text-decoration: none;
     }
 
 `;
 
-export const BtnFilterIcon = styled.div<{ active: boolean , status: string }>`
+export const BtnFilterIcon = styled.div<{status: string }>`
     width: 12px;
     height: 12px;
     margin-right: 8px;
