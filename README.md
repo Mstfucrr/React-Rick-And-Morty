@@ -1,46 +1,134 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Proje Başlığı
 
-## Available Scripts
+### Bu proje [Figma](https://www.figma.com/file/yG06KXDlMRs1dPMmuWG1e8/viravira.co---Frontend-Developer-Task-(Rick-and-Morty)?type=design&node-id=0-1&mode=design&t=JHMwFi0WJ8aQvBP4-0) tasarımını React kullanarak bir web uygulamasına dönüştürmek ve [GraphQL API](https://rickandmortyapi.com/graphql)'si üzerinden verileri çekerek bu verileri tasarımda göstermektir.
 
-In the project directory, you can run:
 
-### `npm start`
+* **Projenizin amacı aşağıdaki unsurları içerir**
+  - Tasarımın uygulamaya dönüştürülmesi: Figma tasarımınızı React kullanarak gerçek bir web uygulamasına dönüştürmek.
+  - Verileri getirmek: GraphQL API'si üzerinden verileri çekmek için uygun querileri kullanmak
+  - Verilerin gösterilmesi: Çekilen verileri kullanarak uygulamada karakterlerin, lokasyonların veya diğer veri öğelerinin detaylarını göstermek. Örneğin, karakterlerin isimlerini, resimlerini, statülerini, türlerini vb. göstermek için verileri tasarıma uygun şekilde yerleştirmek.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<img src="https://www.pngplay.com/wp-content/uploads/14/Rick-And-Morty-Logo-PNG-HD-Quality.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="60%" height="auto" />
 
-### `npm test`
+## Bu Projedeki  API Kullanımı
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+#### Api Bağlantısı
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```http
+  https://rickandmortyapi.com/graphql
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| Operasyon                          | Parametreler                                      | Açıklama                                                          |
+| :--------------------------------- | :----------------------------------------------- | :---------------------------------------------------------------- |
+| `character(id: ID!)`               | `id: ID!`                                        | Belirli bir karakteri ID'ye göre getirir.                           |
+| `location(id: ID!)`                | `id: ID!`                                        | Belirli bir lokasyonu ID'ye göre getirir.                            |
+| `locations(page: Int, filter: FilterLocation)` | `page: Int`, `filter: FilterLocation`           | Tüm lokasyonların listesini getirir.                                |
 
-### `npm run eject`
+- `character(id: ID!)` operasyonu, belirli bir karakterin ID'sine göre karakter bilgilerini getirir.
+- `location(id: ID!)` operasyonu, belirli bir lokasyonun ID'sine göre lokasyon bilgilerini getirir.
+- `locations(page: Int, filter: FilterLocation)` operasyonu, sayfalama ve filtreleme seçenekleriyle tüm lokasyonların listesini getirir.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Projedeki Queriler
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+* ### Lokasyon Querileri
+     - #### Lokasyonu id'sine göre getirir.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+    | Parametre | Tip     | Açıklama           |
+    | :-------- | :------ | :----------------- |
+    | `$id`     | `ID!`   | **Gerekli**. Lokasyonun ID'si |
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    ---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+     - #### Bütün Lokasyonları getirir.
+
+    | Parametre | Tip           | Açıklama                              |
+    | :-------- | :------------ | :------------------------------------ |
+    | `$page`   | `Int!`        | **Gerekli**. Sayfa numarası            |
+    | `$filter` | `FilterLocation` | Filtreleme seçenekleri (isteğe bağlı) |
+
+    
+* ### Karakter Querileri
+
+    - #### Karakteri id'sine göre getirir.
+
+    | Parametre | Tip        | Açıklama                          |
+    | --------- | ---------- | --------------------------------- |
+    | `id`      | `ID!`      | **Gerekli**. Karakter ID'si       |
+
+
+## Kullanılan Teknolojiler
+ 
+### Bu proje için kullanılan teknolojiler aşağıdaki gibidir:
+
+**UI ve Komponent Geliştirme:**
+- [React](https://react.dev): Kullanıcı arayüzü ve bileşenleri oluşturma için kullanılan JavaScript kütüphanesi.
+- [React DOM](https://www.npmjs.com/package/react-dom): React uygulamasını HTML DOM'a bağlamak için kullanılan paket.
+- [React Router DOM](https://github.com/remix-run/react-router): React uygulamasında yönlendirme işlemlerini gerçekleştirmek için kullanılan paket.
+- [Styled Components](https://github.com/styled-components/styled-components): React bileşenlerine özel CSS-in-JS çözümü sağlayan paket.
+- [Bootstrap 4.6.2](https://getbootstrap.com/docs/4.6/getting-started/introduction/): HTML ve CSS tabanlı tasarım kütüphanesi.
+
+**Veri Yönetimi ve API İletişimi:**
+- [GraphQL Request](https://www.npmjs.com/package/graphql-request): GraphQL API'sine HTTP istekleri yapmak için kullanılan paket.
+
+**Stil ve Tasarım:**
+- Sass: CSS'in yazımını geliştiren ve daha düzenli hale getiren bir CSS önprosesörü.
+
+**Diğer:**
+- TypeScript: JavaScript'in statik tip kontrolünü sağlayan bir programlama dili.
+---
+
+## Bilgisayarınızda Çalıştırın
+
+Projeyi klonlayın
+
+```bash
+   gh repo clone Mstfucrr/React-Rick-And-Morty
+```
+
+Proje dizinine gidin
+
+```bash
+  cd project_name
+```
+
+Gerekli paketleri yükleyin
+
+```bash
+  npm install
+```
+
+Build edin
+```bash
+  npm run build
+```
+
+Projeyi çalıştırın
+
+```bash
+  npm run start
+```
+Ve tarayıcıda görüntülemek için **http://localhost:3000** açın.
+
+
+## Ekran Görüntüleri 
+  <h3> WEB </h3>
+<div>
+  <img src="https://github.com/Mstfucrr/React-Rick-And-Morty/assets/76887611/eedb3bda-9c8d-4822-8008-3c7ded77ca83" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="40%" height="auto" />
+  <img src="https://github.com/Mstfucrr/React-Rick-And-Morty/assets/76887611/4c1be8af-750f-4dce-b306-84aba6fb4d4a" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="40%" height="auto" />
+  <img src="https://github.com/Mstfucrr/React-Rick-And-Morty/assets/76887611/734e4bb4-9040-4f46-bfdf-0919e20b8e1e" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="40%" height="auto" /
+</div>
+  <h3> MOBİLE </h3>
+<div>
+
+  <img src="https://github.com/Mstfucrr/React-Rick-And-Morty/assets/76887611/84e09f0c-9e69-4ee5-be87-436417dcb056" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="33%" height="auto" />
+  <img src="https://github.com/Mstfucrr/React-Rick-And-Morty/assets/76887611/cd0ca3d1-781b-4172-80a0-c0027e263521" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="33%" height="auto" />
+  <img src="https://github.com/Mstfucrr/React-Rick-And-Morty/assets/76887611/51cce556-59dc-4ed6-85fb-9776bf9cf45b" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="33%" height="auto" />
+</div>
+
