@@ -46,7 +46,7 @@ export const getCharactersByLocation = async (id: string , page: number , filter
     const characters = filterLocationResidents(location, filter ?? {});
     const info = {
         count: characters.length,
-        pages: 1,
+        pages: Math.ceil(characters.length / 20),
         next: null,
         prev: null
     }
