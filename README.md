@@ -116,19 +116,17 @@ Projeyi çalıştırın
 ```
 Ve tarayıcıda görüntülemek için **http://localhost:3000** açın.
 
-
 ## Ekran Görüntüleri 
   <h3> WEB </h3>
 <div>
-  <img src="https://github.com/Mstfucrr/React-Rick-And-Morty/assets/76887611/eedb3bda-9c8d-4822-8008-3c7ded77ca83" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="40%" height="auto" />
-  <img src="https://github.com/Mstfucrr/React-Rick-And-Morty/assets/76887611/4c1be8af-750f-4dce-b306-84aba6fb4d4a" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="40%" height="auto" />
-  <img src="https://github.com/Mstfucrr/React-Rick-And-Morty/assets/76887611/734e4bb4-9040-4f46-bfdf-0919e20b8e1e" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="40%" height="auto" /
+  <img src="https://github.com/Mstfucrr/React-Rick-And-Morty/assets/76887611/98c222b8-23f2-4c55-8eb8-e5f41014ff57" width="60%" height="auto" />
+  <img src="https://github.com/Mstfucrr/React-Rick-And-Morty/assets/76887611/81d792e4-1d94-4465-8209-d5169819e73d" width="60%" height="auto" />
+  <img src="https://github.com/Mstfucrr/React-Rick-And-Morty/assets/76887611/8615c3b8-9e7d-422c-8868-e43e7543b722" width="60%" height="auto" />
 </div>
   <h3> MOBİLE </h3>
 <div>
-
-  <img src="https://github.com/Mstfucrr/React-Rick-And-Morty/assets/76887611/84e09f0c-9e69-4ee5-be87-436417dcb056" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="33%" height="auto" />
-  <img src="https://github.com/Mstfucrr/React-Rick-And-Morty/assets/76887611/cd0ca3d1-781b-4172-80a0-c0027e263521" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="33%" height="auto" />
-  <img src="https://github.com/Mstfucrr/React-Rick-And-Morty/assets/76887611/51cce556-59dc-4ed6-85fb-9776bf9cf45b" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="33%" height="auto" />
+  <img src="https://github.com/Mstfucrr/React-Rick-And-Morty/assets/76887611/474eda3d-b51d-40ba-aede-af3d73af4552" width="33%" height="auto" />
+  <img src="https://github.com/Mstfucrr/React-Rick-And-Morty/assets/76887611/8ce6f803-6fdd-42d0-8731-610fbd58645e" width="33%" height="auto" />
+  <img src="https://github.com/Mstfucrr/React-Rick-And-Morty/assets/76887611/bfbc808e-3f88-4504-975c-35a91feb4b7a" width="33%" height="auto" />
 </div>
 
