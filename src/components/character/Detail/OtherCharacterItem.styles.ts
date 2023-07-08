@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const OtherCharacterItem = styled.div`
     width: 290px;
-    padding: 20px 2px;
+    padding: 10px 2px;
 `;
 
 // other_character_item_img
