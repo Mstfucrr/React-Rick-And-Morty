@@ -35,7 +35,14 @@ export const CharacterDetailPage = () => {
 
     return (
         <>
-            {error && <div>Error</div>}
+            {error &&
+                <div className="container p-5">
+                    <div className="alert alert-danger" role="alert">
+                        Error loading character
+                    </div>
+                </div>
+
+            }
             {loading &&
                 <div className="pl-5 pr-5 row justify-content-between">
                     <div className="col-md-4">
