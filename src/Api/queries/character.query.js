@@ -1,7 +1,7 @@
 const { gql } = require('graphql-request');
 
 
-function CharacterByIdQuery() {
+export function CharacterByIdQuery() {
     const query = gql`
     query($id: ID!)  {
         character(id: $id) {
@@ -58,7 +58,7 @@ function CharacterByIdQuery() {
     return query;
 }
 
-function CharactersQuery() {
+export function CharactersQuery() {
     const query = gql`
     query ($page: Int, $filter: FilterCharacter) {
         characters(page: $page, filter: $filter) {
@@ -117,9 +117,4 @@ function CharactersQuery() {
     }
     `;
     return query;
-}
-
-module.exports = {
-    CharacterByIdQuery,
-    CharactersQuery
 }

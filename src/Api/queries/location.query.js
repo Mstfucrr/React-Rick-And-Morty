@@ -1,6 +1,6 @@
 const { gql } = require('graphql-request');
 
-function LocationByIdQuery() {
+export function LocationByIdQuery() {
     var query = gql`
     query ($id: ID!) {
         location(id: $id) {
@@ -26,7 +26,7 @@ function LocationByIdQuery() {
 }
 
 
-function LocationsQuery() {
+export function LocationsQuery() {
     var query = gql`
     query ($page: Int!, $filter: FilterLocation) {
         locations(page: $page, filter: $filter) {
@@ -54,4 +54,3 @@ function LocationsQuery() {
 }
 
 
-module.exports = { LocationByIdQuery, LocationsQuery };
