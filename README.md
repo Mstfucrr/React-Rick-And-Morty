@@ -82,7 +82,8 @@
 - [React Router DOM](https://github.com/remix-run/react-router): Package used to perform routing operations in React application.
 - [Styled Components](https://github.com/styled-components/styled-components): Package that provides a custom CSS-in-JS solution for React components.
 - [Bootstrap 4.6.2](https://getbootstrap.com/docs/4.6/getting-started/introduction/): HTML and CSS based design library.
-
+- [Skeleton Loader](https://www.npmjs.com/package/skeleton-loader) : Skeleton loaders are visual placeholders for information while data is still loading. A skeleton loader provides a low fidelity representation of the interface that will be loaded.
+  
 **Server:**
 - [Axios](https://www.npmjs.com/package/axios): Promise-based HTTP client for JavaScript. It has the ability to make HTTP requests from the browser and manage the conversion of request and response data.
 
