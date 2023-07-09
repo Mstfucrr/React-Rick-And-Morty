@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Character, FilterCharacter } from "../Api/Schemas/character";
 import { Info } from "../Api/Schemas/main";
-import { getCharactersByLocation } from "../Api/character.api";
+import { getCharactersByLocation } from "../Api/Controllers/character.api";
 import { FilterByStatusList } from "../components/character/filters/FilterByStatusList";
 import { colors } from "../assets/Colors/Colors";
 import { CharacterList } from "../components/character/List/CharacterList";

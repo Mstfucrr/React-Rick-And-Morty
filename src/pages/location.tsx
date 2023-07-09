@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getLocations } from "../Api/location.api";
+import { getLocations } from "../Api/Controllers/location.api";
 import { Location } from "../Api/Schemas/location";
 import { Info } from "../Api/Schemas/main";
 import { LocationList } from "../components/location/LocationList";

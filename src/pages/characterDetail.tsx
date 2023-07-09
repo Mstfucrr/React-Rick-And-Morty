@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getCharacter } from "../Api/character.api";
+import { getCharacter } from "../Api/Controllers/character.api";
 import { Character } from "../Api/Schemas/character";
 import { CharacterDetailView } from "../components/character/Detail/CharacterDetail";
 import { SkeletonLoading } from "../components/SkeletonLoading";
