@@ -15,8 +15,8 @@ export const BtnFilterStye = styled.a<{ active: number , color : string , hoverc
     justify-content: flex-start;
     margin: 0 5px;
     cursor: pointer;
-    background-color: ${props => props.active == 1 ? props.color : 'white'};
-    border: ${props => props.active == 1 ? props.border : '1px solid '+props.activecolor};
+    background-color: ${props => props.active === 1 ? props.color : 'white'};
+    border: ${props => props.active === 1 ? props.border : '1px solid '+props.activecolor};
     &:hover {
         background-color: ${props => props.hovercolor};
         text-decoration: none;
