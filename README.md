@@ -1,5 +1,5 @@
 
-# REACT İLE RICK AND MORTY 
+# REACT İLE <img src="https://www.pngplay.com/wp-content/uploads/14/Rick-And-Morty-Logo-PNG-HD-Quality.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="20%" height="auto" />
 
 ### Bu proje [Figma](https://www.figma.com/file/yG06KXDlMRs1dPMmuWG1e8/viravira.co---Frontend-Developer-Task-(Rick-and-Morty)?type=design&node-id=0-1&mode=design&t=JHMwFi0WJ8aQvBP4-0) tasarımını React kullanarak bir web uygulamasına dönüştürmek ve [GraphQL API](https://rickandmortyapi.com/graphql)'si üzerinden verileri çekerek bu verileri tasarımda göstermektir.
 
@@ -11,7 +11,7 @@
 
 ---
 
-<img src="https://www.pngplay.com/wp-content/uploads/14/Rick-And-Morty-Logo-PNG-HD-Quality.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="60%" height="auto" />
+
 
 ## Bu Projedeki  API Kullanımı
 
@@ -27,11 +27,13 @@
 | :--------------------------------- | :----------------------------------------------- | :---------------------------------------------------------------- |
 | `character(id: ID!)`               | `id: ID!`                                        | Belirli bir karakteri ID'ye göre getirir.                           |
 | `location(id: ID!)`                | `id: ID!`                                        | Belirli bir lokasyonu ID'ye göre getirir.                            |
-| `locations(page: Int, filter: FilterLocation)` | `page: Int`, `filter: FilterLocation`           | Tüm lokasyonların listesini getirir.                                |
+| `locations(page: Int, filter: FilterLocation)` | `page: Int`, `filter?: FilterLocation`           | Tüm lokasyonların listesini sayfa numarası ve opsiyonel olarak filtrelere göre getirir.|
+| `getCharactersByLocation(id: string, page: number, filter?: FilterCharacter)` | `id: string`,`page: Int`, `filter: FilterCharacter`  | Karakterleri Lokasyon ID' ye, sayfa numarasına ve opsiyonel olarak filtrelere göre getirir.|
 
 - `character(id: ID!)` operasyonu, belirli bir karakterin ID'sine göre karakter bilgilerini getirir.
 - `location(id: ID!)` operasyonu, belirli bir lokasyonun ID'sine göre lokasyon bilgilerini getirir.
 - `locations(page: Int, filter: FilterLocation)` operasyonu, sayfalama ve filtreleme seçenekleriyle tüm lokasyonların listesini getirir.
+- `getCharactersByLocation(id: string, page: number, filter?: FilterCharacter)` operasyonu, belirli bir lokasyonun ID'sine göre sayfalama ve filtreleme seçenekleriyle tüm karakter listesini getirir.
 
 ## Projedeki Queriler
 
@@ -53,6 +55,15 @@
     | `$page`   | `Int!`        | **Gerekli**. Sayfa numarası            |
     | `$filter` | `FilterLocation` | Filtreleme seçenekleri (isteğe bağlı) |
 
+    ---
+
+     - #### Lokasyon id'sine göre Karakterleri getirir.
+
+    | Parametre | Tip           | Açıklama                              |
+    | :-------- | :------------ | :------------------------------------ |
+    | `$id`     | `ID!`   | **Gerekli**. Lokasyonun ID'si |
+    | `$page`   | `Int!`        | **Gerekli**. Sayfa numarası            |
+    | `$filter` | `FilterCharacter` | Filtreleme seçenekleri (isteğe bağlı) |
     
 * ### Karakter Querileri
 
