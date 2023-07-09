@@ -1,7 +1,6 @@
-import { FilterLocation } from "../Schemas/location";
-import { gql } from "graphql-request";
+const { gql } = require('graphql-request');
 
-export function LocationByIdQuery() {
+function LocationByIdQuery() {
     var query = gql`
     query ($id: ID!) {
         location(id: $id) {
@@ -27,7 +26,7 @@ export function LocationByIdQuery() {
 }
 
 
-export function LocationsQuery() {
+function LocationsQuery() {
     var query = gql`
     query ($page: Int!, $filter: FilterLocation) {
         locations(page: $page, filter: $filter) {
@@ -53,3 +52,6 @@ export function LocationsQuery() {
     `;
     return query;
 }
+
+
+module.exports = { LocationByIdQuery, LocationsQuery };

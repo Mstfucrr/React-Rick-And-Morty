@@ -1,6 +1,7 @@
-import { gql } from "graphql-request";
+const { gql } = require('graphql-request');
 
-export function CharacterByIdQuery() {
+
+function CharacterByIdQuery() {
     const query = gql`
     query($id: ID!)  {
         character(id: $id) {
@@ -57,9 +58,9 @@ export function CharacterByIdQuery() {
     return query;
 }
 
-export function CharactersQuery() {
+function CharactersQuery() {
     const query = gql`
-    query {
+    query ($page: Int, $filter: FilterCharacter) {
         characters(page: $page, filter: $filter) {
             info {
                 count
@@ -118,3 +119,7 @@ export function CharactersQuery() {
     return query;
 }
 
+module.exports = {
+    CharacterByIdQuery,
+    CharactersQuery
+}
