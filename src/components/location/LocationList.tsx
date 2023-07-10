@@ -1,4 +1,5 @@
 import { LocationListStyle } from './LocationList.styles';
+import { motion } from "framer-motion"
 
 
 // companent
@@ -63,9 +64,39 @@ export const LocationList = (props: { locations: Location[] }) => {
                             ))}
                         </>
                     ) : (
-                        props.locations.map((location) => (
 
-                            <LocationElement location={location} key={location.id} />
+                        props.locations.map((location, index) => (
+                            <motion.div
+                                initial={{
+                                    opacity: 0,
+                                    scale: 0.5,
+                                    y: -100,
+                                    x: -100,
+                                    borderRadius: '15px',
+
+                                }}
+                                animate={{
+                                    opacity: 1,
+                                    scale: 1,
+                                    y: 0,
+                                    x: 0,
+                                    borderRadius: '15px',
+                                }}
+                                transition={{ duration: 0.5, delay: 0.08 * index }}
+                                key={location.id}
+                                className="m-2 ml-4 d-flex justify-content-center"
+                                whileHover={{
+                                    scale: 1.03,
+                                    boxShadow: '0px 0px 10px 0px rgba(0,0,0,0.75)',
+                                    transition: { duration: 0.2 }
+                                }}
+                                style={{
+                                    borderRadius: '15px',
+                                    width : '440px'
+                                }}
+                            >
+                                <LocationElement location={location} key={location.id} />
+                            </motion.div>
                         ))
                     )}
                 </div>
