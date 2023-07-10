@@ -4,7 +4,6 @@ import styled from "styled-components";
 
 export const LocationItem = styled.a`
     width: 100%;
-    max-width: 440px;
     height: 100%;
     border-radius: 15px;
     background-color: #EFE04B;
@@ -21,6 +20,10 @@ export const LocationItem = styled.a`
         transform: scale(1.01);
         text-decoration: none;
         color: #000000;
+    }
+    @media screen and (max-width: 768px) {
+        height: 100%;
+        width: 75%;
     }
 `;
 

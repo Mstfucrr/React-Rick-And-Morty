@@ -6,7 +6,7 @@ import { LocationItem, LocationItemName, ColInfo, ColTitle } from './locationEle
 
 export const LocationElement = (props: { location: Location }) => {
     return (
-        <LocationItem className="p-4 m-2 ml-4 mr-4" href={`/characters?location=${props.location.id}`}>
+        <LocationItem className="p-4 d-block" href={`/characters?location=${props.location.id}`}>
 
             <LocationItemName>
                 {props.location.name}
