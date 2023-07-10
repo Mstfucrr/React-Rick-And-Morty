@@ -4,6 +4,7 @@ import { Character } from '../../../Api/Schemas/character';
 import { SkeletonLoading } from '../../SkeletonLoading';
 import { CharacterElement } from './CharacterElement';
 import { CharacterListStyle } from './CharacterList.styles';
+import { motion } from "framer-motion"
 
 export const CharacterList = (props: { characters: Character[] }) => {
     const [loading, setLoading] = useState(true);
@@ -65,11 +66,28 @@ export const CharacterList = (props: { characters: Character[] }) => {
                         </>
                     ) :
                         (
-                            props.characters.map((character) => {
-                                return (
-                                    <CharacterElement character={character} key={character.id} />
-                                );
-                            })
+                            // liste itemleri framer motion ile sıralı olarak ekrana çıkartılıyor
+                            props.characters.map((character, index) => (
+                                <motion.div
+                                    key={character.id}
+                                    initial={{ 
+                                        opacity: 0,
+                                        y: 50
+
+                                     }}
+                                    animate={{ 
+                                        opacity: 1,
+                                        y: 0
+                                     }}
+                                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                                >
+                                    <CharacterElement character={character} />
+                                </motion.div>
+
+                            ))
+
+
+                            
                         )
                     }
                 </div>
