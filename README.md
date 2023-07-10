@@ -102,7 +102,7 @@ Clone the project
 Navigate to the project directory
 
 ```bash
-  cd project_name
+  cd React-Rick-And-Morty
 ```
 
 Install the required packages
